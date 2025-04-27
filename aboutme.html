@@ -53,21 +53,45 @@
 								</span>
 							  
 								<!-- Modal -->
-								<div id="connectModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:1000; align-items:center; justify-content:center;">
-								  <div style="background:#fff; max-width:400px; margin:60px auto; padding:30px 20px; border-radius:12px; position:relative;">
-									<button id="closeModal" style="position:absolute; top:8px; right:12px; font-size:20px; background:none; border:none; cursor:pointer;">×</button>
-									<h2 style="margin-top:0;">Connect With Me</h2>
-									<form action="https://formspree.io/f/mwpoprzp" method="POST">
-									  <label for="name">Name:</label><br>
-									  <input type="text" name="name" id="name" required style="width:100%;margin-bottom:10px;"><br>
-									  <label for="email">Email:</label><br>
-									  <input type="email" name="email" id="email" required style="width:100%;margin-bottom:10px;"><br>
-									  <label for="needs">What kind of website do you need?</label><br>
-									  <textarea name="needs" id="needs" rows="3" required style="width:100%;margin-bottom:15px;"></textarea><br>
-									  <button type="submit" class="button big" style="width:100%;">Submit</button>
-									</form>
-								  </div>
-								</div>
+<div id="connectModal" style="
+display:none; 
+position:fixed; 
+top:0; left:0; width:100vw; height:100vh; 
+background:rgba(0,0,0,0.6); 
+z-index:1000; 
+align-items:center; 
+justify-content:center;">
+<div style="
+  background:#fff; 
+  width:90%; 
+  max-width:500px; 
+  min-height:340px; 
+  margin:auto; 
+  padding:40px 30px 30px 30px; 
+  border-radius:18px; 
+  box-shadow:0 8px 32px rgba(0,0,0,0.15);
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  ">
+<button id="closeModal" style="
+	position:absolute; top:12px; right:18px; 
+	font-size:28px; 
+	background:none; border:none; 
+	cursor:pointer; color:#444;">×</button>
+<h2 style="margin-top:0; margin-bottom:20px; font-size:1.6em;">Connect With Me</h2>
+<form action="https://formspree.io/f/yourformid" method="POST" style="flex:1;">
+  <label for="name" style="font-weight:500;">Name:</label><br>
+  <input type="text" name="name" id="name" required style="width:100%;margin-bottom:14px; padding:8px 10px; font-size:1em; border:1px solid #ddd; border-radius:6px;"><br>
+  <label for="email" style="font-weight:500;">Email:</label><br>
+  <input type="email" name="email" id="email" required style="width:100%;margin-bottom:14px; padding:8px 10px; font-size:1em; border:1px solid #ddd; border-radius:6px;"><br>
+  <label for="needs" style="font-weight:500;">What kind of website do you need?</label><br>
+  <textarea name="needs" id="needs" rows="4" required style="width:100%;margin-bottom:18px; padding:8px 10px; font-size:1em; border:1px solid #ddd; border-radius:6px; resize:vertical;"></textarea><br>
+  <button type="submit" class="button big" style="width:100%; font-size:1.15em; padding:12px 0; border-radius:6px;">Submit</button>
+</form>
+</div>
+</div>
+
 							  </section>
 							  
 							  <script>
