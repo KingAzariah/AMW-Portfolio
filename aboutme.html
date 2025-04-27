@@ -34,24 +34,55 @@
 								</header>
 
 							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>About Me</h1>
-										</header>
-                                        <p>Hi, I’m a full-stack developer passionate about crafting seamless digital experiences with HTML, CSS, JavaScript, Java, and ReactJS. My personal mantra is: Believe. Integrity. Excellence. I believe any goal is possible with the right mindset and integrity—excellence naturally follows.</p>
-											
-										<p>Outside of coding, I’m a proud dad to two wonderful young daughters, and they keep me on my toes every day. I’m a sports enthusiast, a single-origin black coffee connoisseur, and a home cook who’s always up for a new culinary adventure. I love discovering off-the-beaten-path restaurants and coffee shops—foodie explorations are a big part of my life.</p>
-											
-										<p>Let’s connect and create something great together!</p>
-										<ul class="actions">
-											<li><a href="aboutme.html" class="button big">Resume</a></li>
-										</ul>
-									</div>
-									<span class="image object">
-										<img src="images/headshot.JPG" alt="" />
-									</span>
-								</section>
+							<section id="banner">
+								<div class="content">
+								  <header>
+									<h1>About Me</h1>
+								  </header>
+								  <p>Hi, I’m a full-stack developer passionate about crafting seamless digital experiences with HTML, CSS, JavaScript, Java, and ReactJS. My personal mantra is: Believe. Integrity. Excellence. I believe any goal is possible with the right mindset and integrity—excellence naturally follows.</p>
+								  <p>Outside of coding, I’m a proud dad to two wonderful young daughters, and they keep me on my toes every day. I’m a sports enthusiast, a single-origin black coffee connoisseur, and a home cook who’s always up for a new culinary adventure. I love discovering off-the-beaten-path restaurants and coffee shops—foodie explorations are a big part of my life.</p>
+								  <p>Let’s connect and create something great together!</p>
+								  <ul class="actions">
+									<li>
+									  <button class="button big" id="connectBtn" type="button">Connect With Me</button>
+									</li>
+								  </ul>
+								</div>
+								<span class="image object">
+								  <img src="images/headshot.JPG" alt="" />
+								</span>
+							  
+								<!-- Modal -->
+								<div id="connectModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:1000; align-items:center; justify-content:center;">
+								  <div style="background:#fff; max-width:400px; margin:60px auto; padding:30px 20px; border-radius:12px; position:relative;">
+									<button id="closeModal" style="position:absolute; top:8px; right:12px; font-size:20px; background:none; border:none; cursor:pointer;">×</button>
+									<h2 style="margin-top:0;">Connect With Me</h2>
+									<form action="https://formspree.io/f/mwpoprzp" method="POST">
+									  <label for="name">Name:</label><br>
+									  <input type="text" name="name" id="name" required style="width:100%;margin-bottom:10px;"><br>
+									  <label for="email">Email:</label><br>
+									  <input type="email" name="email" id="email" required style="width:100%;margin-bottom:10px;"><br>
+									  <label for="needs">What kind of website do you need?</label><br>
+									  <textarea name="needs" id="needs" rows="3" required style="width:100%;margin-bottom:15px;"></textarea><br>
+									  <button type="submit" class="button big" style="width:100%;">Submit</button>
+									</form>
+								  </div>
+								</div>
+							  </section>
+							  
+							  <script>
+							  document.getElementById('connectBtn').onclick = function() {
+								document.getElementById('connectModal').style.display = 'flex';
+							  };
+							  document.getElementById('closeModal').onclick = function() {
+								document.getElementById('connectModal').style.display = 'none';
+							  };
+							  // Optional: Hide modal on outside click
+							  document.getElementById('connectModal').onclick = function(e) {
+								if (e.target === this) this.style.display = 'none';
+							  };
+							  </script>
+							  
 
 							<!-- Section -->
 							<section>
@@ -71,7 +102,7 @@
 									<article>
 										<a href="https://kingazariah.github.io/Union-Coffee-Company/index.html" class="image"><img src="images/UnionCoffLogo.jpg" alt="" /></a>
 										<h3>Union Coffee Co.</h3>
-										<h4 style="font-weight: bold;">HTML, CSS, SCSS, JavaScript</h4>
+										<h4 style="font-weight: bold;">HTML, CSS, SCCS, JavaScript</h4>
 										<p>At Union Coffee, our mission is simple: to bring people together through exceptional coffee. Whether it’s in our shop, at a catered event, or anywhere in between, we’re dedicated to fostering connections and creating unforgettable moments.</p>
 										<ul class="actions">
 											<li><a href="https://kingazariah.github.io/Union-Coffee-Company/index.html" class="button">More</a></li>
